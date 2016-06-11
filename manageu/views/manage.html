@@ -1,0 +1,127 @@
+
+<h1 style=" font-family: 'Lato';text-align: center; background-color: white; border-radius: 4px; border-style: 1px;">Manage<span style="color:  #009688;">U</span> Home</h1>
+<div style="border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
+
+<h4 style="margin-left: 60px;"><span style="font-weight: bold;">Welcome</span> <span style="font-family: 'Oswald'; color: #f9ab4a;">{{ username }}!</span></h4>
+
+<h2 style="text-align: center; font-family: 'Oswald';">Add a Bill</h2>
+
+<form>
+	<input ng-model="billss.item" class="form-control" placeholder="Bill/Item"></input>
+	<input ng-model="billss.date" class="form-control"placeholder="Date"></input>
+	<input ng-model="billss.amount" class="form-control" placeholder="Amount"></input>
+	<button ng-click="addBill()">Submit</button>
+</form>
+</div>
+
+<div style="margin-bottom: 30px; margin-top: 30px; border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
+	<h3 style="text-align: center; font-family: 'Oswald';">How much do you plan on making this week?</h3>
+		<input class="form-control" ng-model="make" placeholder="100.00"></input>
+		<button ng-click="makeSubmit()" style="font-family: 'Open Sans';">Submit</button>
+</div>
+
+
+<div style="text-align: center;  border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
+<h2 class="landing">How Much Do You Have</h2>
+<b>{{ poss | currency }}</b>
+<hr class="featurette divider">
+
+<h2 class="landing">What Are Your Daily needs</h2>
+<div class="input">
+	<input class="form-control input" ng-model="day.item" placeholder="Need"></input>
+	<input class="form-control input" ng-model="day.amount" placeholder="Price"></input>
+	<button ng-click="addDay()">Add</button>
+	<button ng-click="removeDay()">Remove</button>
+</div>
+<ul ng-repeat="day in days">
+	<li>{{ day.item }}</li>
+	<li>{{ day.amount | currency }}</li>
+</ul>
+
+<hr class="featurette divider">
+
+<h2 class="landing">What Are Your Weekly Needs</h2>
+<div class="input">
+	<input class="form-control input" ng-model="week.item" placeholder="Need"></input>
+	<input class="form-control input" ng-model='week.amount' placeholder="Price"></input>
+	<button ng-click='addWeek()'>Add</button>
+	<button ng-click="removeWeek()">Remove</button>
+</div>
+<ul ng-repeat="week in weekly">
+	<li>{{ week.item }}</li>
+	<li>{{ week.amount  | currency }}</li>
+</ul>
+<div>
+
+<hr class="featurette divider">
+	<h2 class="landing">What Are Your Monthly Needs?</h2>
+	<button ng-click="removeBill()">Remove</button>
+	<ul ng-repeat="bill in bills">
+		<li>{{ bill.item }}</li>
+
+		<li>{{ bill.date }}</li>
+	</ul>
+
+</div>
+
+<hr class="featurette divider">
+	<div class="row">
+		<div class="col col-md-6">
+			<h3 class="landing">How much is free</h3>
+			<p style="text-align: center;"><b>{{ free | currency }}</b></p>
+			<input class="input" ng-model="freeAdd" class="form-control" placeholder="Adjust"></input>
+			<button ng-click="addFree()">Adjust</button>	
+		</div>
+		
+		<div class="col col-md-6">
+			<h3 class="landing">Things You Want</h3>
+			<div class="input">
+				<input class="form-control" ng-model="want.item" placeholder="Want" width="90px"></input>
+				<input class="form-control input" ng-model="want.amount" placeholder="Price"></input>
+				<button ng-click="addWant()">Add</button>
+				<button ng-click="removeWant()">Remove</button>
+			</div>
+			<ul ng-repeat='want in wants'>
+				<li>{{want.item}}</li>
+				<li>{{want.amount | currency }}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col col-md-6" style="text-align: center; border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
+		<h2>Emergency Fund</h2>
+		<p><b>{{ emergency | currency}}</b></p>
+		<input class="form-control" ng-model="emerInput" placeholder="Amount"></input>
+		<button ng-click="changeEmer()">Modify</button>
+		<i>Note: it is wise to have at least $200.00 in emergency fund</i>
+	</div>
+	<div class="col col-md-6" style="border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
+		<h2 style="text-align: center; font-family: 'Oswald';">Investment</h2>
+		<input ng-model="invest.place" placeholder="place" class="form-control"></input>
+		<input ng-model="invest.amount" placeholder="amount" class="form-control"></input>
+		<button ng-click="addInvestment()">Add</button>
+		<button ng-click="removeInvestment()">Remove</button>
+		<ul ng-repeat="invest in investment">
+			<li>{{ invest.place }}</li>
+			<li>{{ invest.amount | currency }}</li>
+		</ul>
+		<br><i>Note: Investment is extremely important in developing wealth. Look up Assets, Bonds, and liabilities to learn more</i>
+	</div>
+</div>
+<div style="height: 25px; background-color: #009688; border-radius: 4px;">
+	<h4 style="text-align: center; font-family: 'Open Sans';"> &copy; ManageU, 2015, <span style="color:#f9ab4a; font-style: italic; ">All Rights Reserved</span></h4>
+	<div class="row">
+	<div class="col col-md-1">
+	<p class="contact" style="height: 30px; width: 50px; color: black; font-family: 'Open Sans';"><a style="color: black; font-family: 'Oswald';" href="#/contact">Contact</a></p>
+	</div>
+	<div class="col col-md-1">
+	<p class="contact" style=" height: 30px; width: 50px; color: black; font-family: 'Open Sans';"><a style="color: black; font-family: 'Oswald';" href="#/help">Help</a></p>
+	</div>
+	<div class="col col-md-1">
+	<p class="contact" style=" height: 30px; width: 50px; color: black; font-family: 'Open Sans';"><a style="color: black; font-family: 'Oswald';" href="#/home">Home</a></p>
+	</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+{
+  "name": "manageu",
+  "version": "1.0.0",
+  "description": "Finance tracker and organizer",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrterry06/scottjs.git"
+  },
+  "keywords": [
+    "ManageU",
+    "Finance",
+    "Tracker",
+    "Management"
+  ],
+  "author": "Scott Lamont Terry Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrterry06/scottjs/issues"
+  },
+  "homepage": "https://github.com/mrterry06/scottjs#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongojs": "^2.4.0",
+    "morgan": "^1.7.0",
+    "nodemailer": "^2.4.2",
+    "nodemon": "^1.9.2"
+  }
+}
