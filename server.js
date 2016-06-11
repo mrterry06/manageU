@@ -5,7 +5,7 @@ var bcrypt 	= require('bcryptjs');
 var morgan	= require('morgan');
 var bodyParser= require('body-parser');
 var nodemailer = require('nodemailer');
-var dburl 	= 'mongodb://mrterry06:skater112@ds013014.mlab.com:13014/manage';
+var dburl 	= URL;
 var db = mongojs(dburl, ['users']);
 
 db.on('connect', function(){
@@ -30,8 +30,8 @@ app.use(morgan('dev'));
 	port: 465,
 	secure: true,
 	auth: {
-		user: 'mrterry06@gmail.com',
-		pass: 'Elfin123'
+		user: 'email',
+		pass: 'pass'
 	}
 };
 
@@ -43,7 +43,7 @@ app.post('/email', function(req, res){
  	var tips = '"' + req.body.name + '"' + ' '  + '<' + req.body.email + '>';
  	var mailOption = {
 	from: tips,
-	to: 'mrterry06@gmail.com',
+	to: 'bigdummy@fred.com',
 	subject: req.body.subject ,
 	text: req.body.email,
 	html: element
