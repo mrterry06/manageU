@@ -1,48 +1,266 @@
-body {
-  background: linear-gradient(135deg, #3E3E3F, #3E3E3F 20%, white);
-}
-button {
+/*Start of Globals*/
+.header-prop {
+  height: 70px;
   background-color: #009688;
-  border-radius: 3px;
+  border-radius: 4px;
   border-style: solid;
-  height: 30px;
+  border-width: 1px;
+}
+.header-prop h1 {
+  text-align: center;
+  font-family: 'Lato';
+}
+.header-prop h1 i {
+  font-family: 'Open Sans';
+  color: #f9ab4a;
+}
+.sub-head-prop {
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
+}
+.button {
+  text-shadow: 2px 2px white;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+/*End of Globals*/
+body {
+  /*background-color: black;*/
+  background: linear-gradient(135deg, #3e3e3f, #3e3e3f 20%, white);
+}
+#initial .section-style {
+  text-align: center;
+  font-family: 'PT Serif';
+}
+#initial .initial-header {
+  height: 70px;
+  background-color: #009688;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+}
+#initial .initial-header h1 {
+  text-align: center;
+  font-family: 'Lato';
+}
+#initial .initial-header h1 i {
+  font-family: 'Open Sans';
+  color: #f9ab4a;
+}
+#initial img {
+  display: block;
+  margin: 0 auto;
+}
+#initial .initial-divider {
+  box-shadow: 2px 2px white;
+}
+#initial .left-section {
+  text-align: center;
+  font-family: 'PT Serif';
+  border-radius: 4px;
+  border-style: solid;
+  background-color: white;
+}
+#initial .left-section p {
+  font-family: 'Oswald';
+  font-size: 16px;
+}
+#initial .right-section {
+  text-align: center;
+  font-family: 'PT Serif';
+}
+#initial .moto {
+  text-align: center;
+  font-family: 'PT Serif';
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-style: italic;
+}
+#account .wide-button {
+  width: 49%;
+  display: inline;
+}
+#account .header {
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
+  text-align: center;
+}
+#account .header span {
+  color: #009688;
+}
+#account ul {
+  position: relative;
+  list-style: none;
+  top: 10px;
+}
+#account ul li {
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
   width: 200px;
-  font-weight: bold;
- 
+  margin: 0 auto;
+  font-family: 'Oswald';
 }
-
-.contact {
-	text-shadow: 2px 2px white;
-	background-color: white;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 4px;
+#account .name-header {
+  margin-left: 60px;
 }
-
-.landing {
-	text-align: center; 
-	font-family: 'Oswald';
+#account .name-header span {
+  font-family: 'Oswald';
+  color: #f9ab4a;
 }
-
-ul {
-	list-style-type: none;
-
+#account .form-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: white;
 }
-
-.input {
-	width: 200px; 
-	margin: 0 auto;
+#account .form-container .form-subheader {
+  text-align: center;
+  font-family: 'Oswald';
 }
-
-ul li {
-	border-style: solid;
-	border-radius: 4px;
-	border-width: 1px;
-	width: 200px;
-	margin: 0 auto;
-	font-family: 'Oswald';
+#account .form-headings {
+  text-align: center;
+  font-family: 'Oswald';
 }
-
-img {
-	width: 700px;
+#account .coupled-forms .first-form {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: white;
+}
+#account .coupled-forms .second-form {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: white;
+}
+#account .coupled-forms .second-form h2 {
+  text-align: center;
+  font-family: 'Oswald';
+}
+#footer {
+  position: relative;
+  height: 25px;
+  background-color: #009688;
+  border-radius: 4px;
+}
+#footer h4 {
+  text-align: center;
+  font-family: 'Open Sans';
+}
+#footer h4 span {
+  color: #f9ab4a;
+  font-style: italic;
+}
+#footer .links-container {
+  text-align: center;
+}
+#footer .links-container a {
+  text-shadow: 2px 2px white;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  height: 30px;
+  width: 77px;
+  display: inline-block;
+  color: black;
+  font-family: 'Open Sans';
+}
+#contact .header-container {
+  height: 70px;
+  background-color: #009688;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+}
+#contact .header-container h1 {
+  text-align: center;
+  font-family: 'Lato';
+}
+#contact .header-container h1 i {
+  font-family: 'Open Sans';
+  color: #f9ab4a;
+}
+#contact .header-container a {
+  height: 30px;
+  width: 50px;
+  font-family: 'Open Sans';
+  color: black;
+}
+#contact .main-content {
+  text-align: center;
+}
+#contact .main-content .main-header h1 {
+  font-family: 'Source Sans Pro', 'serif';
+  text-align: center;
+}
+#contact .main-content .message-to-client {
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
+}
+#contact .main-content .message-to-client p {
+  font-family: 'Open Sans', 'serif';
+}
+#contact .main-content input {
+  width: 100%;
+  display: block;
+}
+#contact .main-content .email-response {
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
+  border: none;
+}
+#contact .main-content .contact-forms {
+  margin-top: 5px;
+}
+#help .help-header {
+  height: 70px;
+  background-color: #009688;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+}
+#help .help-header h1 {
+  text-align: center;
+  font-family: 'Lato';
+}
+#help .help-header h1 i {
+  font-family: 'Open Sans';
+  color: #f9ab4a;
+}
+#help h4 {
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
+  font-size: 20px;
+}
+#help .help-content {
+  font-family: 'Oswald';
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Lato';
 }

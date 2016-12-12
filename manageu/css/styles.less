@@ -1,10 +1,294 @@
+/*Start of Globals*/
+@man-green: #009688;
+@man-gold: #f9ab4a;
+@border-radd: 4px;
+.header-prop {
+	height: 70px; 
+	background-color: @man-green; 
+	border-radius: 4px; 
+	border-style: solid; 
+	border-width: 1px;
+
+		h1 {
+			text-align: center; 
+			font-family: 'Lato';
+
+			i {
+				font-family: 'Open Sans'; 
+				color:@man-gold;
+			}
+		}
+}
+
+.sub-head-prop {
+	border-radius: @border-radd; 
+	background-color: white; 
+	border-style: solid; 
+	border-width: 1px; 
+	font-family: 'Lato';
+}
+
+.button {
+	text-shadow: 2px 2px white;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
+	
+}
+
+/*End of Globals*/
+
 body {
+  /*background-color: black;*/
   background: linear-gradient(135deg, #3E3E3F, #3E3E3F 20%, white);
 }
 
-button {
-	background-color:  #009688;
-	border-radius: 3px;
-	border-style: solid;
-	font-famil: 'Open Sans';
+
+
+#initial {
+
+	.section-style {
+		text-align: center; 
+		font-family: 'PT Serif';		
+	}
+
+	.initial-header {
+		.header-prop;
+	
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.initial-divider {
+		box-shadow: 2px 2px white;
+	}
+
+	.left-section {
+ 		.section-style;
+		border-radius: @border-radd; 
+		border-style: solid; 
+		background-color: white;
+
+		p {
+			font-family: 'Oswald'; 
+			font-size: 16px;
+		}
+	}
+
+	.right-section  {
+		.section-style;
+	}
+
+	.moto {
+		.section-style;
+		background-color: white;
+		border: 2px solid black;
+		border-radius: @border-radd;
+		font-style: italic;
+	}
+
+
+
+}
+
+
+
+
+#account {
+
+	.wide-button {
+		width: 49%;
+		display: inline;
+
+	}
+
+	.header {
+		
+		.sub-head-prop;
+		text-align: center;
+
+		span {
+			color:  @man-green;
+		}
+	}
+
+	ul {
+
+		position: relative;
+		list-style: none;
+		top: 10px;
+		li {
+			border-style: solid;
+			border-radius: 4px;
+			border-width: 1px;
+			width: 200px;
+			margin: 0 auto;
+			font-family: 'Oswald';
+		}
+	}
+
+	.name-header {
+		margin-left: 60px;
+
+		span {
+			font-family: 'Oswald'; 
+			color: @man-gold;
+		}
+	}
+
+
+	.form-container {
+		margin-bottom: 30px; 
+		margin-top: 30px; 
+		border-style: solid; 
+		border-width: 1px; 
+		border-radius: @border-radd; 
+		background-color: white;
+	
+		.form-subheader {
+			text-align: center; 
+			font-family: 'Oswald';
+		}
+
+	}
+
+	.form-headings {
+		text-align: center;
+		font-family:  'Oswald'
+	}
+
+
+	.coupled-forms {
+
+		.first-form {
+			text-align: center; 
+			border-style: solid; 
+			border-width: 1px; 
+			border-radius: 4px; 
+			background-color: white;
+		}
+
+		.second-form {
+
+			border-style: solid; 
+			border-width: 1px; 
+			border-radius: 4px;
+			background-color: white;
+
+			h2 {
+				text-align: center; 
+				font-family: 'Oswald';
+			}
+		}
+	}
+
+}
+
+#footer {
+	position: relative;
+	height: 25px; 
+	background-color: @man-green; 
+	border-radius: @border-radd;
+
+	h4 {
+
+		text-align: center; 
+		font-family: 'Open Sans';
+
+		span {
+			color:@man-gold; 
+			font-style: italic; 
+		}
+	}
+
+	.links-container {
+
+		 text-align: center;
+		a {
+			.button;
+			text-align: center;
+			height: 30px; 
+			width: 77px;
+			display: inline-block; 
+			color: black; 
+			font-family: 'Open Sans'; 
+			
+		
+		}
+	}
+
+}
+
+#contact {
+
+	.header-container {
+		.header-prop;
+
+		a {
+			height: 30px; 
+			width: 50px; 
+			color: black; 
+			font-family: 'Open Sans'; 
+			color: black; 
+		}
+	}
+
+	.main-content {
+		text-align: center;
+
+		.main-header {
+
+
+			h1 {
+		
+			font-family: 'Source Sans Pro', 'serif'; 
+			text-align: center; 
+			}
+		}
+
+		.message-to-client {
+			margin-bottom: 5px; 
+			
+			.sub-head-prop;	
+
+			p {
+				font-family: 'Open Sans', 'serif';
+			}
+		}
+
+		input {
+			width: 100%;
+			display: block;
+		}
+
+		.email-response {
+			.sub-head-prop;
+			border: none;
+		}
+
+		.contact-forms {
+			margin-top: 5px;
+		}
+	}
+}
+
+#help {
+
+	.help-header {
+		.header-prop;		
+	}	
+
+	h4 {
+		.sub-head-prop;
+		font-size: 20px;	
+	}	
+
+	.help-content {
+		font-family: 'Oswald'; 
+		font-size: 16px;
+		.sub-head-prop;
+	}
 }

@@ -1,33 +1,42 @@
-<div style="height: 70px; background-color: #009688; border-radius: 4px; border-style: solid; border-width: 1px;">
-  <h1 style="text-align: center; font-family: 'Lato';">Manage<span style="font-family: 'Open Sans'; color:#f9ab4a; font-style: italic;">U</span></h1>
   
-  <p class="contact" style="height: 30px; width: 50px; color: black; font-family: 'Open Sans';"><a style="color: black; font-family: 'Oswald';" href="#/home">Home</a></p>
-</div>
-<div style="text-align: center;">
-<div style="margin-left: 500px;">
-  <h1  class="contact"style=" font-family: 'Source Sans Pro', 'serfif'; text-align: center; width: 120px;">Contact</h1></div>
-  <div style="margin-bottom: 5px; border-style: solid; border-width: 1px; border-radius: 4px; background-color: white;">
-  <p style=" font-family: 'Open Sans', 'serif';">If you have any question about how to work the application or if a particular feature is not working, just fill out the form below. I'll get back to you as fast as possible. If you just want someone to talk too, thats fine too. I'll be your friend :), Sincerely, ManageU</p>
-</div>
-<div ng-include="'nav.html'"></div>
-<form class="form-inline">
-  <div class="form-group">
-    <label for="exampleInputName2" class="contact">Name</label>
-    <input type="text" ng-model="mail.name" class="form-control" id="exampleInputName2" placeholder="Jane Doe" required>
+<div id="contact">
+  <div class="header-container">
+    <h1>Manage<i>U</i></h1>
+    
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail2" class="contact">Email</label>
-    <input type="email" ng-model='mail.email' class="form-control" id="exampleInputEmail2" placeholder="John.Doe@example.com" required>
+  <div class="main-content">
+      
+      <div class="main-header">
+        <h1 style="text-align: center; background-color: white; border: 1px solid black;" >Contact</h1>
+      </div>
+
+      <div class="message-to-client">
+        <p>If you have any question about how to work the application or if a particular feature is not working, just fill out the form below. I'll get back to you as fast as possible. If you just want someone to talk too, thats fine too. I'll be your friend :), Sincerely, ManageU</p>
+      </div>
+
+      
+      <form class="form-inline user-email">
+        <div class="form-group contact-forms">
+          <label class="contact">Name:</label>
+          <input cols="100" type="text" ng-model="mail.name" class="form-control" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-group contact-forms">
+          <label class="contact">Email:</label>
+          <input cols="100" type="email" ng-model='mail.email' class="form-control" placeholder="John.Doe@example.com" required>
+        </div>
+        <div class="form-group contact-forms">
+          <label class="contact">Subject:</label>
+          <input type="text" ng-model='mail.subject' class="form-control"  cols="100" placeholder="Questions" required>
+        </div><br>
+        <div class="form-group contact-forms" style="margin-top: 20px;">
+          <label class="contact">Content:  </label>
+          <textarea type="text" ng-model='mail.content' class="form-control" placeholder="Content" rows="10" cols="100"></textarea>
+        </div><br>
+        <button class="btn" style="margin-top: 10px;" ng-click='mailSubmit()'>Send Message</button>
+      </form>
+
+      <p class="email-response">{{ response }}</p>
+
   </div>
-  <div class="form-group">
-    <label for="exampleInputName2" class="contact">Subject</label>
-    <input type="text" ng-model='mail.subject' class="form-control" id="exampleInputName2" placeholder="Questions" required>
-  </div><br>
-  <div class="form-group" style="margin-top: 20px;">
-    <label for="exampleInputName2" class="contact">Content:  </label>
-    <textarea type="text" ng-model='mail.content' class="form-control" id="exampleInputName2" placeholder="Content" style="width: 750px; height: 250px;"></textarea>
-  </div><br>
-  <button style=" margin-left: 60px;" ng-click='mailSubmit()'>Send Message</button>
-</form>
-<p style="border-radius: 4px; background-color: white; border-style: solid; border-width: 1px; font-family: 'Lato';">{{ response }}</p>
-</div>
+  <div ng-include="'views/footer.html'"></div>
+</div>  
