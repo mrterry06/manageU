@@ -70,7 +70,7 @@ angular.module('man-ctrl', ["man-serv"])
 		};
 
 		refresh();
-
+//CREATE LOCAL-GLOBAL HANDLER TO INITIATE AND HANDLE ALL CRUD FUNC
 		// $scope.handleRequest = function(req, obj, route){
  	// 		var id   = $rootScope.id;
 		// 	var make = {user: $scope.accountInfo.user, have: $scope.make };
