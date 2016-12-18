@@ -10,13 +10,13 @@ var app = angular.module("manageUApp", ['ngRoute', "man-serv", "man-ctrl"]);
 				controller: 'homeCtrl'
 			})
 			.when('/manage', {
-				// 		resolve: {
-				// 	"check": function($location, $rootScope){
-				// 		if(!$rootScope.manage){
-				// 			$location.path('/');
-				// 		}
-				// 	}
-				// },
+						resolve: {
+					"check": function($location, $rootScope){
+						if(!$rootScope.manage){
+							$location.path('/');
+						}
+					}
+				},
 				templateUrl: 'views/manage.html',
 				controller: 'accountCtrl'
 			})
