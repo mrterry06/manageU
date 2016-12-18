@@ -7,47 +7,9 @@ var bodyParser  = require('body-parser');
 var dburl 	    = "localhost";
 var db 			= mongojs(dburl, ['users']);
 var mailer 		= require("./mailer");
-var gulp  		= require('gulp');
-var livereload  = require('gulp-livereload');
-var port 		= process.env.PORT ||  8888;
-
-gulp.task('styles', function(){
-	gulp.src('**/*.css')
-		.pipe(livereload());
-		console.log("styles has loaded");
-});
-
-gulp.task('structure', function(){
-	gulp.src('**/*.html')
-		.pipe(livereload());
-		console.log('html has loaded');
-});
-
-gulp.task('func', function(){
-	gulp.src('**/*.js')
-		.pipe(livereload());
-		console.log("the behavior has reloaded");
-});
-
-gulp.task('comp', function(){
-	
-	gulp.src('**/*.less')
-		.pipe(livereload());
-		console.log("the preprocessor file has changed");
-});	
-
-gulp.task('watch', function(){
-	
-	livereload.listen();
-	gulp.watch('**/*.js');
-	gulp.watch('**/*.css');
-	gulp.watch('**/*.html');
-	gulp.watch('**/*.less');
-	console.log("this should be logging");
-});
+var port 		=   8888;
 
 
-gulp.task('default', ['styles', 'structure', 'func','watch']);
 
 db.on('connect', function(){
 	console.log('you have connected to the database');
