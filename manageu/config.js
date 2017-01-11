@@ -12,7 +12,7 @@ var app = angular.module("manageUApp", ['ngRoute', "man-serv", "man-ctrl"]);
 			.when('/manage', {
 						resolve: {
 					"check": function($location, $rootScope){
-						if(!$rootScope.manage){
+						if(!$rootScope.loggedIn){
 							$location.path('/');
 						}
 					}
