@@ -9,8 +9,8 @@ var mailer = {};
 	port: 465,
 	secure: true,
 	auth: {
-		user: 'mrterry06@gmail.com',
-		pass: 'Elfin123'
+		user: '',
+		pass: ''
 	}
 };
 
