@@ -1,2 +1,4 @@
-# scottjs
-ManageU Finance Tracker
+# ManageU
+A Finance Tracking Service
+See live at: https://immense-coast-61090.herokuapp.com/#/,
+Remote Database: https://www.mla.com/
